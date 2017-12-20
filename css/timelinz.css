@@ -1,0 +1,92 @@
+.timelinz {
+  position: relative;
+}
+.timelinz,
+.timelinz * {
+  box-sizing: border-box;
+}
+.timelinz__interval-wrap {
+  overflow: hidden;
+}
+.timelinz__interval {
+  position: relative;
+  line-height: 12px;
+  text-align: right;
+  font-size: 12px;
+}
+.timelinz__interval + .timelinz__interval {
+  margin-top: 50px;
+}
+.timelinz__interval:after {
+  height: 1px;
+  position: absolute;
+  top: 50%;
+  right: 0;
+  left: 0;
+  margin-right: 60px;
+  content: ' ';
+  background-color: rgba(0, 0, 0, 0.08);
+}
+.timelinz__interval-time {
+  width: 55px;
+  display: inline-block;
+  text-align: left;
+}
+.timelinz__line {
+  width: 60px;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  z-index: 1;
+}
+.timelinz__line-wrap {
+  position: absolute;
+  top: 0;
+  right: 55px;
+  bottom: 0;
+  left: 0;
+  overflow: hidden;
+  overflow-x: auto;
+}
+.timelinz__empty-line {
+  width: 7px;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  margin-left: -3.5px;
+  content: ' ';
+  background: rgba(0, 0, 0, 0.05);
+  border-radius: 30px;
+}
+.timelinz__filled-line {
+  width: 3px;
+  position: absolute;
+  left: 50%;
+  margin-left: -1.5px;
+  background: rgba(255, 255, 255, 0.9);
+}
+.timelinz__point {
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  z-index: 1;
+  left: 50%;
+  margin-left: -10px;
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.9);
+  box-shadow: 0 2px 0 rgba(0, 0, 0, 0.1);
+}
+.timelinz__point_has_image {
+  width: 60px;
+  height: 60px;
+  margin-left: -30px;
+  padding: 5px;
+  border-radius: 30px;
+}
+.timelinz__point-img {
+  max-width: 50px;
+  height: 50px;
+  overflow: hidden;
+  border-radius: 25px;
+}

@@ -1,0 +1,249 @@
+.timelinz {
+    position: relative;
+    margin-top: 80px;
+}
+
+.timelinz,
+.timelinz * {
+    box-sizing: border-box;
+}
+
+.timelinz__interval-wrap {
+    overflow: hidden;
+}
+
+.timelinz__interval {
+    position: relative;
+    line-height: 12px;
+    text-align: right;
+    font-size: 12px;
+}
+
+.timelinz__interval + .timelinz__interval {
+    margin-top: 60px;
+}
+
+.timelinz__interval:after {
+    height: 1px;
+    position: absolute;
+    top: 50%;
+    right: 0;
+    left: 0;
+    margin-right: 60px;
+    content: ' ';
+    background-color: rgba(255, 255, 255, 0.35);
+}
+
+.timelinz__interval-time {
+    width: 55px;
+    display: inline-block;
+    text-align: left;
+    /*opacity: .5;*/
+}
+
+.timelinz__line {
+    width: 60px;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    z-index: 1;
+    transition: opacity .3s ease-in-out;
+}
+
+.timelinz__line-title {
+    width: 100%;
+    position: absolute;
+    top: -90px;
+    white-space: nowrap;
+    text-align: center;
+}
+
+.timelinz__line-wrap {
+    position: absolute;
+    top: 0;
+    right: 55px;
+    bottom: 0;
+    left: 70px;
+}
+
+.timelinz__line-wrap:hover .timelinz__line {
+    opacity: .2;
+}
+
+.timelinz__line-wrap:hover .timelinz__line:hover {
+    opacity: 1;
+}
+
+.timelinz__empty-line {
+    display: none;
+}
+
+.timelinz__filled-line {
+    width: 2px;
+    position: absolute;
+    left: 50%;
+    margin-left: -1.5px;
+    background: #ffffff;
+}
+
+.timelinz__point {
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    z-index: 1;
+    left: 50%;
+    margin-left: -10px;
+    border-radius: 10px;
+    border: 2px solid #ffffff;
+    background-color: #5d503e;
+}
+
+.timelinz__point span {
+    width: 12px;
+    height: 12px;
+    margin: 0 0 1px 2px;
+    display: inline-block;
+    background-color: #f7ab14;
+    border-radius: 6px;
+    opacity: 0;
+    transition: opacity .2s ease-out;
+}
+
+.timelinz__point:hover span {
+    opacity: 1;
+}
+
+.timelinz__point_has_image {
+    width: 60px;
+    height: 60px;
+    margin-left: -30px;
+    padding: 3px;
+    border-radius: 30px;
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.timelinz__point-img {
+    max-width: 50px;
+    height: 50px;
+    overflow: hidden;
+    border-radius: 25px;
+}
+
+h1, h2, h3, h4, h5, h6,
+body {
+    font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-weight: 300;
+}
+
+#alert {
+    margin-bottom: 0;
+    border-radius: 0;
+}
+
+/*#header {*/
+    /*min-height: 550px;*/
+    /*padding-top: 32px;*/
+    /*background: center top url("../images/bg.png") #070707;*/
+    /*background-size: cover;*/
+/*}*/
+
+.navbar .nav > li > a {
+    color: #fff;
+    opacity: .7;
+    transition: opacity .2s ease-out;
+}
+
+.navbar .nav > li > a:focus, .navbar .nav > li > a:hover {
+    opacity: 1;
+    background: none;
+}
+
+.navbar .nav > li.active > a {
+    opacity: 1;
+    background: none;
+    line-height: 1.42;
+}
+
+.navbar .nav > li.active > a::after {
+    width: 40%;
+    height: 1px;
+    content: '';
+    display: block;
+    margin-top: 3px;
+    background-color: #f7ab14;
+}
+
+.navbar .nav .btn {
+    margin-left: 20px;
+    padding: 9px 18px;
+}
+
+.hero {
+    padding-top: 60px;
+    color: #fff;
+}
+
+.hero h1 {
+    margin-bottom: 25px;
+    font-size: 60px;
+}
+
+.hero p {
+    font-size: 20px;
+}
+
+#main {
+    min-height: 300px;
+    padding: 60px 0;
+    /*border: 1px solid rgba(255, 255, 255, 0.1);*/
+    border-width: 1px 0;
+    color: #fff;
+    /*background: radial-gradient(50% 128%, #73634C 17%, #231E17 100%) #4B4032;*/
+}
+
+#main h2 {
+    margin-bottom: 20px;
+}
+
+#main p {
+    font-size: 18px;
+}
+
+.speaker {
+    display: inline-block;
+    color: #fff;
+}
+
+.speaker:focus, .speaker:hover {
+    color: #fff;
+    text-decoration: none;
+}
+
+.speaker img {
+    width: 64px;
+    display: inline-block;
+    vertical-align: top;
+    margin-right: 15px;
+    border-radius: 30px;
+    border: 4px solid rgba(255, 255, 255, 0.15);
+}
+
+.speaker-inner {
+    display: inline-block;
+}
+
+.speaker-name {
+    margin: 6px 0 0;
+}
+
+.speaker-job {
+    opacity: .5;
+}
+
+
+.timelinz__point_has_image{
+    padding: 3px !important;
+
+
+
+}

@@ -1,0 +1,1406 @@
+
+
+/*@font-face {*/
+    /*font-family: Georgia;*/
+    /*src: url(../fonts/Georgia.ttf);*/
+/*}*/
+
+/*@font-face {*/
+    /*font-family: "Arial Narrow Bold";*/
+    /*src: url(../fonts/NewsCycle-Bold.ttf);*/
+/*}*/
+
+/*@font-face {*/
+    /*font-family: "News Cycle Regular";*/
+    /*src: url(../fonts/NewsCycle-Regular.ttf);*/
+/*}*/
+
+@font-face {
+    font-family: "Minion Pro";
+    src: url(../fonts/MinionPro-Regular.otf);
+}
+
+@font-face {
+    font-family: "Adobe Caslon";
+    src: url(../fonts/ACaslonPro-Bold.otf);
+}
+
+@font-face {
+    font-family: "Open Sans Regular";
+    src: url(../fonts/OpenSans-Regular.ttf);
+}
+
+@font-face {
+    font-family: "Open Sans Bold";
+    src: url(../fonts/OpenSans-Bold.ttf);
+}
+
+@font-face {
+    font-family: "Open Sans Light";
+    src: url(../fonts/OpenSans-Light.ttf);
+}
+
+@font-face {
+    font-family: "Montserrat Bold";
+    src: url(../fonts/Montserrat-Bold.ttf);
+}
+
+@font-face {
+    font-family: "Montserrat Light";
+    src: url(../fonts/Montserrat-Light.ttf);
+}
+
+body{
+    /* width: 100%; */
+    min-height: 100%;
+    font-family: "Minion Pro", serif;
+    font-size: 16px;
+    /*line-height: 1.42857143;*/
+    color: #000000;
+    font-weight: normal;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+
+}
+
+h1,
+.uk-h1,
+h2,
+.uk-h2,
+h3,
+.uk-h3,
+h4,
+.uk-h4,
+h5,
+.uk-h5,
+h6,
+.uk-h6{
+    font-family: "Adobe Caslon", sans-serif;
+    font-weight: 700;
+    /*line-height: 1.1;*/
+    color: #000000;
+}
+
+.uk-grid-xsmall{
+    margin-left: -10px;
+}
+
+.uk-grid-xsmall > * {
+    padding-left: 10px;
+}
+
+.uk-padding-xsmall{
+    padding: 10px;
+}
+
+.uk-opensan-bold{
+    font-family: "Open Sans Bold", serif;
+}
+
+.uk-opensan-regular{
+    font-family: "Open Sans Regular", serif;
+    font-weight: normal;
+}
+
+
+.uk-button, .uk-navbar-nav > li > a, .uk-navbar-nav > li > a:hover{
+    font-family: "Open Sans Regular", serif;
+    color: #000000;
+
+}
+
+.uk-menu .uk-navbar-nav.uk-subnav-divider > :nth-child(n+2):not(.uk-first-column)::before{
+    border-left: 1px solid #000000;
+}
+
+
+
+.uk-menu .uk-navbar-nav > li > a{
+    height: auto;
+    padding: 0;
+}
+
+.uk-menu .uk-navbar-nav > li{
+    height: 50px;
+    padding: 0 15px;
+}
+
+
+.uk-menu .uk-icone a.uk-icon{
+    border: 1px solid;
+    border-radius: 50%;
+    padding: 4px;
+    color: #000000;
+}
+
+.uk-menu .uk-icone a.uk-icon:hover{
+    background-color: #000000;
+    color: #ffffff;
+}
+
+.uk-menu .uk-icone > li:last-child{
+    padding-left: 6px;
+}
+
+.uk-modal-search .uk-modal-dialog{
+    background-color: rgba(255, 255, 255, .9);
+}
+
+.uk-modal-search .uk-search{
+    background-color: #fff;
+}
+
+.uk-modal-search .uk-search-input{
+    color: #000000;
+}
+
+.uk-submenu .uk-tab > li{
+    padding-left: 0;
+    width: 12.5%;
+    transition-duration: 0.3s;
+}
+
+.uk-submenu .uk-tab > li > a{
+    /*padding: 5px 34px;*/
+    font-family: "Montserrat Light", serif;
+}
+
+.uk-submenu .uk-tab::before{
+    left: 0 !important;
+    border-bottom: none;
+    /*border-bottom: 3px solid #e5e5e5;*/
+}
+
+.uk-search-input::-webkit-input-placeholder { /* WebKit, Blink, Edge */
+    color:    #000000;
+}
+.uk-search-input:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+    color:    #000000;
+    opacity:  1;
+}
+.uk-search-input::-moz-placeholder { /* Mozilla Firefox 19+ */
+    color:    #000000;
+    opacity:  1;
+}
+.uk-search-input:-ms-input-placeholder { /* Internet Explorer 10-11 */
+    color:    #000000;
+}
+.uk-search-input::-ms-input-placeholder { /* Microsoft Edge */
+    color:    #000000;
+}
+
+.uk-cover-slide .uk-overlay-default{
+    transition-duration: 0.3s;
+}
+
+.uk-cover-slide:hover .uk-overlay-default{
+
+    background-color: rgba(255,255, 255, 0.95);
+
+}
+
+
+/********************************************** couleur actualité ***************************************************/
+
+/** Couleur des menus **/
+
+.uk-menu-act > a, .uk-menu-act.uk-active > a:hover{
+    font-weight: bolder;
+    color: rgba(217,44,107,.6);
+    border-bottom: 5px solid rgba(217,44,107,.6);
+}
+
+.uk-menu-act.uk-active > a, .uk-menu-act.uk-active > a:hover, .uk-menu-act > a:hover{
+    color: rgba(217,44,107,1);
+}
+
+.uk-menu-act.uk-active > a, .uk-menu-act.uk-active > a:hover, .uk-menu-act > a:hover{
+    font-weight: bolder;
+    border-bottom: 5px solid rgba(217,44,107,1);
+}
+
+/*
+    Affichage des couleurs des articles par catégorie
+ */
+
+.uk-article-act .uk-categorie a{
+    color: rgba(217,44,107,1);
+}
+
+.uk-article-act{
+    border-bottom: 5px solid rgba(217,44,107,1);
+}
+
+.uk-article-act.uk-article-horizontal, .uk-article-act.uk-article-button, .uk-article-act.uk-button-shared{
+    border: none;
+}
+
+.uk-article-act .uk-categorie a:before{
+    content: "";
+    height: 10px;
+    width: 10px;
+    background: rgba(217,44,107,1);
+    display: inline-block;
+    margin-right: 5px;
+    border-radius: 50%;
+}
+
+/*
+    Traitement des articles de la catégorie sous fond gris
+ */
+
+.uk-background-pc .uk-article-act{
+    border-top: 5px solid rgba(217,44,107,1);
+    border-bottom: none;
+    padding-top: 20px;
+}
+
+/*
+    Couleur des boutons de la catégorie
+ */
+
+.uk-article-act.uk-article-button .uk-button-default, .uk-article-act.uk-button-shared .uk-button-default{
+    background: rgba(217,44,107,1);
+    color: #ffffff;
+    font-weight: bolder;
+    border: none;
+    border-radius: 15px;
+}
+
+.uk-article-act.uk-button-shared .uk-button-default{
+    border-radius: 0px;
+    color: #ffffff;
+
+}
+
+.uk-article-act.uk-button-shared .uk-bg-default .uk-icon{
+    color: rgba(217,44,107,1);
+    font-size: 16px;
+    margin-right: 10px;
+}
+
+/*
+    Affichage du titre des sous catégorie dans la page catégorie
+ */
+
+.uk-banner-title.uk-article-act{
+    border-bottom: none;
+}
+
+.uk-banner-title.uk-article-act > div:first-child{
+    background-color: rgba(217,44,107,1);
+    color: #ffffff;
+    font-weight: bolder;
+    text-transform: uppercase;
+}
+
+.uk-banner-title.uk-article-act > div:last-child{
+    border-top: 5px solid rgba(217,44,107,1);
+    color: rgba(217,44,107,1);
+    border-bottom: 1px solid rgba(217,44,107,1);
+    font-weight: lighter;
+    text-transform: uppercase;
+}
+
+.uk-banner-title.uk-article-act  .uk-dropdown-nav > li > a:hover{
+    background-color: rgba(217,44,107, .6);
+}
+
+
+/********************************************** couleur economie ***************************************************/
+
+/** Couleur des menus **/
+
+.uk-menu-eco > a, .uk-menu-eco.uk-active > a:hover{
+    font-weight: bolder;
+    color: rgba(255, 160, 0, .6);
+    border-bottom: 5px solid rgba(255, 160, 0, .6);
+}
+
+.uk-menu-eco.uk-active > a, .uk-menu-eco.uk-active > a:hover, .uk-menu-eco > a:hover{
+    color: rgba(255, 160, 0,1)
+}
+
+.uk-menu-eco.uk-active > a, .uk-menu-eco.uk-active > a:hover, .uk-menu-eco > a:hover{
+    font-weight: bolder;
+    border-bottom: 5px solid rgba(255, 160, 0,1)
+}
+
+
+/*
+    Affichage des couleurs des articles par catégorie
+ */
+
+
+.uk-article-eco{
+    border-bottom: 5px solid rgba(255, 160, 0,1)
+}
+
+.uk-article-eco .uk-categorie a{
+    color: rgba(255, 160, 0,1)
+}
+
+.uk-article-eco.uk-article-horizontal, .uk-article-eco.uk-article-button, .uk-article-eco.uk-button-shared{
+    border: none;
+}
+
+.uk-article-eco .uk-categorie a:before{
+    content: "";
+    height: 10px;
+    width: 10px;
+    background: rgba(255, 160, 0,1);
+    display: inline-block;
+    margin-right: 5px;
+    border-radius: 50%;
+}
+
+
+/*
+    Traitement des articles de la catégorie sous fond gris
+ */
+
+.uk-background-pc .uk-article-eco{
+    border-top: 5px solid rgba(255, 160, 0,1);
+    border-bottom: none;
+    padding-top: 20px;
+}
+
+/*
+    Couleur des boutons de la catégorie
+ */
+
+.uk-article-eco.uk-article-button .uk-button-default, .uk-article-eco.uk-button-shared .uk-button-default{
+    background: rgba(255, 160, 0,1);
+    color: #ffffff;
+    font-weight: bolder;
+    border: none;
+    border-radius: 15px;
+}
+
+.uk-article-eco.uk-button-shared .uk-button-default{
+    border-radius: 0px;
+    color: #000;
+
+}
+
+.uk-article-eco.uk-button-shared .uk-bg-default .uk-icon{
+    color: rgba(255, 160, 0,1);
+    font-size: 16px;
+    margin-right: 10px;
+}
+
+/*
+    Affichage du titre des sous catégorie dans la page catégorie
+ */
+
+.uk-banner-title.uk-article-eco{
+    border-bottom: none;
+}
+
+.uk-banner-title.uk-article-eco > div:first-child{
+    background-color: rgba(255, 160, 0,1);
+    color: #ffffff;
+    font-weight: bolder;
+    text-transform: uppercase;
+}
+
+.uk-banner-title.uk-article-eco > div:last-child{
+    border-top: 5px solid rgba(255, 160, 0,1);
+    color: rgba(255, 160, 0,1);
+    border-bottom: 1px solid rgba(255, 160, 0,1);
+    font-weight: lighter;
+    text-transform: uppercase;
+}
+
+
+.uk-banner-title.uk-article-eco  .uk-dropdown-nav > li > a:hover{
+    background-color: rgba(255, 160, 0, .6);
+}
+
+/********************************************** couleur escapade ***************************************************/
+
+/** Couleur des menus **/
+
+.uk-menu-esc > a, .uk-menu-esc.uk-active > a:hover{
+     font-weight: bolder;
+     color: rgba(41,11,60,.6);
+     border-bottom: 5px solid rgba(41,11,60,.6);
+ }
+
+.uk-menu-esc.uk-active > a, .uk-menu-esc.uk-active > a:hover, .uk-menu-esc > a:hover{
+
+    color: rgba(41,11,60,1);
+}
+
+.uk-menu-esc.uk-active > a, .uk-menu-esc.uk-active > a:hover, .uk-menu-esc > a:hover{
+    font-weight: bolder;
+    border-bottom: 5px solid rgba(41,11,60,1);
+}
+
+/*
+    Affichage des couleurs des articles par catégorie
+ */
+
+.uk-article-esc .uk-categorie a{
+    color: rgba(41,11,60,1);
+}
+
+.uk-article-esc{
+    border-bottom: 5px solid rgba(41,11,60,1);
+}
+
+.uk-article-esc.uk-article-horizontal, .uk-article-esc.uk-article-button, .uk-article-esc.uk-button-shared{
+    border: none;
+}
+
+.uk-article-esc .uk-categorie a:before{
+    content: "";
+    height: 10px;
+    width: 10px;
+    background: rgba(41,11,60,1);
+    display: inline-block;
+    margin-right: 5px;
+    border-radius: 50%;
+}
+
+/*
+    Couleur des boutons de la catégorie
+ */
+.uk-article-esc.uk-article-button .uk-button-default, .uk-article-esc.uk-button-shared .uk-button-default{
+    background: rgba(41,11,60,1);
+    color: #ffffff;
+    font-weight: bolder;
+    border: none;
+    border-radius: 15px;
+}
+
+.uk-article-esc.uk-button-shared .uk-button-default{
+    border-radius: 0px;
+    color: #000;
+
+}
+
+.uk-article-esc.uk-button-shared .uk-bg-default .uk-icon{
+    color: rgba(41,11,60,1);
+    font-size: 16px;
+    margin-right: 10px;
+}
+
+/*
+    Traitement des articles de la catégorie sous fond gris
+ */
+
+.uk-background-pc .uk-article-esc{
+    border-top: 5px solid rgba(41,11,60,1);
+    border-bottom: none;
+    padding-top: 20px;
+}
+
+/*
+    Affichage du titre des sous catégorie dans la page catégorie
+ */
+
+.uk-banner-title.uk-article-esc{
+    border-bottom: none;
+}
+
+.uk-banner-title.uk-article-esc > div:first-child{
+    background-color: rgba(41,11,60,1);
+    color: #ffffff;
+    font-weight: bolder;
+    text-transform: uppercase;
+}
+
+.uk-banner-title.uk-article-esc > div:last-child{
+    border-top: 5px solid rgba(41,11,60,1);
+    color: rgba(41,11,60,1);
+    border-bottom: 1px solid rgba(41,11,60,1);
+    font-weight: lighter;
+    text-transform: uppercase;
+}
+
+.uk-banner-title.uk-article-esc  .uk-dropdown-nav > li > a:hover{
+    background-color: rgba(41,11,60, .6);
+}
+
+
+/********************************************** couleur société ***************************************************/
+
+/** Couleur des menus **/
+
+.uk-menu-soc > a, .uk-menu-soc.uk-active > a:hover{
+    font-weight: bolder;
+    color: rgba(39,114,133,.6);
+    border-bottom: 5px solid rgba(39,114,133,.6);
+}
+
+.uk-menu-soc.uk-active > a,.uk-menu-soc.uk-active > a:hover, .uk-menu-soc > a:hover{
+
+    color: rgba(39,114,133,1);
+}
+
+.uk-menu-soc.uk-active > a,.uk-menu-soc.uk-active > a:hover, .uk-menu-soc > a:hover{
+      font-weight: bolder;
+      border-bottom: 5px solid rgba(39,114,133,1);
+  }
+
+/*
+    Affichage des couleurs des articles par catégorie
+ */
+
+.uk-article-soc .uk-categorie a{
+
+    color: rgba(39,114,133,1);
+}
+
+.uk-article-soc{
+    border-bottom: 5px solid rgba(39,114,133,1);
+}
+
+.uk-article-soc.uk-article-horizontal, .uk-article-soc.uk-article-button, .uk-article-soc.uk-button-shared{
+    border: none;
+}
+
+.uk-article-soc .uk-categorie a:before{
+    content: "";
+    height: 10px;
+    width: 10px;
+    background: rgba(39,114,133,1);
+    display: inline-block;
+    margin-right: 5px;
+    border-radius: 50%;
+}
+
+/*
+    Couleur des boutons de la catégorie
+ */
+
+.uk-article-soc.uk-article-button .uk-button-default, .uk-article-soc.uk-button-shared .uk-button-default{
+    background: rgba(39,114,133,1);
+    color: #ffffff;
+    font-weight: bolder;
+    border: none;
+    border-radius: 15px;
+}
+
+.uk-article-soc.uk-button-shared .uk-button-default{
+    border-radius: 0px;
+    color: #ffffff;
+
+}
+
+.uk-article-soc.uk-button-shared .uk-bg-default .uk-icon{
+    color: rgba(39,114,133,1);
+    font-size: 16px;
+    margin-right: 10px;
+}
+
+/*
+    Traitement des articles de la catégorie sous fond gris
+ */
+
+.uk-background-pc .uk-article-soc{
+    border-top: 5px solid rgba(39,114,133,1);
+    border-bottom: none;
+    padding-top: 20px;
+}
+
+
+/*
+    Affichage du titre des sous catégorie dans la page catégorie
+ */
+
+.uk-banner-title.uk-article-soc{
+    border-bottom: none;
+}
+
+.uk-banner-title.uk-article-soc > div:first-child{
+    background-color: rgba(39,114,133,1);
+    color: #ffffff;
+    font-weight: bolder;
+    text-transform: uppercase;
+}
+
+.uk-banner-title.uk-article-soc > div:last-child{
+    border-top: 5px solid rgba(39,114,133,1);
+    color: rgba(39,114,133,1);
+    border-bottom: 1px solid rgba(39,114,133,1);
+    font-weight: lighter;
+    text-transform: uppercase;
+}
+
+.uk-banner-title.uk-article-soc  .uk-dropdown-nav > li > a:hover{
+    background-color: rgba(39,114,133, .6);
+}
+
+/********************************************** couleur evenement ***************************************************/
+
+/** Couleur des menus **/
+
+.uk-menu-eve > a, .uk-menu-eve.uk-active > a:hover{
+     font-weight: bolder;
+     color: rgba(55,155,176,.4);
+     border-bottom: 5px solid rgba(55,155,176,.4);
+}
+
+.uk-menu-eve.uk-active > a, .uk-menu-eve.uk-active > a:hover, .uk-menu-eve > a:hover{
+    color: rgba(55,155,176,1);
+}
+
+.uk-menu-eve.uk-active > a, .uk-menu-eve.uk-active > a:hover, .uk-menu-eve > a:hover{
+    font-weight: bolder;
+    border-bottom: 5px solid rgba(55,155,176,1);
+}
+
+/*
+    Affichage des couleurs des articles par catégorie
+ */
+
+.uk-article-eve .uk-categorie a{
+    color: rgba(55,155,176,1);
+}
+
+.uk-article-eve{
+    font-weight: bolder;
+    border-bottom: 5px solid rgba(55,155,176,1);
+}
+
+.uk-article-eve.uk-article-horizontal, .uk-article-eve.uk-article-button, .uk-article-eve.uk-button-shared{
+    border: none;
+}
+
+.uk-article-eve .uk-categorie a:before{
+    content: "";
+    height: 10px;
+    width: 10px;
+    background: rgba(55,155,176,1);
+    display: inline-block;
+    margin-right: 5px;
+    border-radius: 50%;
+}
+
+/*
+    Couleur des boutons de la catégorie
+ */
+
+.uk-article-eve.uk-article-button .uk-button-default, .uk-article-eve.uk-button-shared .uk-button-default{
+    background: rgba(55,155,176,1);
+    color: #ffffff;
+    font-weight: bolder;
+    border: none;
+    border-radius: 15px;
+}
+
+
+.uk-article-eve.uk-button-shared .uk-button-default{
+    border-radius: 0px;
+    color: #ffffff;
+
+}
+
+.uk-article-eve.uk-button-shared .uk-bg-default .uk-icon{
+    color: rgba(55,155,176,1);
+    font-size: 16px;
+    margin-right: 10px;
+}
+
+/*
+    Traitement des articles de la catégorie sous fond gris
+ */
+
+.uk-background-pc .uk-article-eve{
+    border-top: 5px solid rgba(55,155,176,1);
+    border-bottom: none;
+    padding-top: 20px;
+}
+
+/*
+    Affichage du titre des sous catégorie dans la page catégorie
+ */
+
+.uk-banner-title.uk-article-eve{
+    border-bottom: none;
+}
+
+.uk-banner-title.uk-article-eve > div:first-child{
+    background-color: rgba(55,155,176,1);
+    color: #ffffff;
+    font-weight: bolder;
+    text-transform: uppercase;
+}
+
+.uk-banner-title.uk-article-eve > div:last-child{
+    border-top: 5px solid rgba(55,155,176,1);
+    color: rgba(55,155,176,1);
+    border-bottom: 1px solid rgba(55,155,176,1);
+    font-weight: lighter;
+    text-transform: uppercase;
+}
+
+.uk-banner-title.uk-article-eve  .uk-dropdown-nav > li > a:hover{
+    background-color: rgba(55,155,176, .6);
+}
+
+/********************************************** couleur innovation ***************************************************/
+
+/** Couleur des menus **/
+
+.uk-menu-inn > a, .uk-menu-inn.uk-active > a:hover{
+    font-weight: bolder;
+    color: rgba(239, 0, 12, .6);
+    border-bottom: 5px solid rgba(239, 0, 12, .6);
+}
+
+.uk-menu-inn.uk-active > a, .uk-menu-inn.uk-active > a:hover, .uk-menu-inn > a:hover{
+    color: rgba(239, 0, 12,1);
+}
+
+.uk-menu-inn.uk-active > a, .uk-menu-inn.uk-active > a:hover, .uk-menu-inn > a:hover{
+    font-weight: bolder;
+    border-bottom: 5px solid rgba(239, 0, 12,1);
+}
+
+/*
+    Affichage des couleurs des articles par catégorie
+ */
+
+.uk-article-inn .uk-categorie a{
+    color: rgba(239, 0, 12,1);
+}
+
+.uk-article-inn{
+    border-bottom: 5px solid rgba(239, 0, 12,1);
+}
+
+.uk-article-inn.uk-article-horizontal, .uk-article-inn.uk-article-button, .uk-article-inn.uk-button-shared{
+    border: none;
+}
+
+.uk-article-inn .uk-categorie a:before{
+    content: "";
+    height: 10px;
+    width: 10px;
+    background: rgba(239, 0, 12,1);
+    display: inline-block;
+    margin-right: 5px;
+    border-radius: 50%;
+}
+
+/*
+    Couleur des boutons de la catégorie
+ */
+
+.uk-article-inn.uk-article-button .uk-button-default, .uk-article-inn.uk-button-shared .uk-button-default{
+    background: rgba(239, 0, 12,1);
+    color: #ffffff;
+    font-weight: bolder;
+    border: none;
+    border-radius: 15px;
+}
+
+.uk-article-inn.uk-button-shared .uk-button-default{
+    border-radius: 0px;
+    color: #ffffff;
+
+}
+
+.uk-article-inn.uk-button-shared .uk-bg-default .uk-icon{
+    color: rgba(239, 0, 12,1);
+    font-size: 16px;
+    margin-right: 10px;
+}
+
+/*
+    Traitement des articles de la catégorie sous fond gris
+ */
+.uk-background-pc .uk-article-inn{
+    border-top: 5px solid rgba(239, 0, 12,1);
+    border-bottom: none;
+    padding-top: 20px;
+}
+
+/*
+    Affichage du titre des sous catégorie dans la page catégorie
+ */
+
+.uk-banner-title.uk-article-inn{
+    border-bottom: none;
+}
+
+.uk-banner-title.uk-article-inn > div:first-child{
+    background-color: rgba(239, 0, 12,1);
+    color: #ffffff;
+    font-weight: bolder;
+    text-transform: uppercase;
+}
+
+.uk-banner-title.uk-article-inn > div:last-child{
+    border-top: 5px solid rgba(239, 0, 12,1);
+    color: rgba(239, 0, 12,1);
+    border-bottom: 1px solid rgba(239, 0, 12,1);
+    font-weight: lighter;
+    text-transform: uppercase;
+}
+
+.uk-banner-title.uk-article-inn  .uk-dropdown-nav > li > a:hover{
+    background-color: rgba(239, 0, 12, .6);
+}
+
+/********************************************** couleur gastronomie ***************************************************/
+
+/** Couleur des menus **/
+
+.uk-menu-gas > a, .uk-menu-gas.uk-active > a:hover{
+    font-weight: bolder;
+    color: rgba(96,189,87,.6);
+    border-bottom: 5px solid rgba(96,189,87,.6);
+}
+
+.uk-menu-gas.uk-active > a, .uk-menu-gas.uk-active > a:hover, .uk-menu-gas > a:hover{
+    color: rgba(96,189,87,1);
+}
+
+.uk-menu-gas.uk-active > a, .uk-menu-gas.uk-active > a:hover, .uk-menu-gas > a:hover{
+    font-weight: bolder;
+    border-bottom: 5px solid rgba(96,189,87,1);
+}
+
+/*
+    Affichage des couleurs des articles par catégorie
+ */
+
+.uk-article-gas .uk-categorie a{
+    color: rgba(96,189,87,1);
+}
+
+.uk-article-gas{
+    border-bottom: 5px solid rgba(96,189,87,1);
+}
+
+.uk-article-gas.uk-article-horizontal, .uk-article-gas.uk-article-button, .uk-article-gas.uk-button-shared{
+    border: none;
+}
+
+.uk-article-gas .uk-categorie a:before{
+    content: "";
+    height: 10px;
+    width: 10px;
+    background: rgba(96,189,87,1);
+    display: inline-block;
+    margin-right: 5px;
+    border-radius: 50%;
+}
+
+/*
+    Couleur des boutons de la catégorie
+ */
+
+.uk-article-gas.uk-article-button .uk-button-default, .uk-article-gas.uk-button-shared .uk-button-default{
+    background: rgba(96,189,87,1);
+    color: #ffffff;
+    font-weight: bolder;
+    border: none;
+    border-radius: 15px;
+}
+
+.uk-article-gas.uk-button-shared .uk-button-default{
+    border-radius: 0px;
+    color: #ffffff;
+
+}
+
+.uk-article-gas.uk-button-shared .uk-bg-default .uk-icon{
+    color: rgba(96,189,87,1);
+    font-size: 16px;
+    margin-right: 10px;
+}
+
+/*
+    Traitement des articles de la catégorie sous fond gris
+ */
+
+.uk-background-pc .uk-article-gas{
+    border-top: 5px solid rgba(96,189,87,1);
+    border-bottom: none;
+    padding-top: 20px;
+}
+
+/*
+    Affichage du titre des sous catégorie dans la page catégorie
+ */
+
+.uk-banner-title.uk-article-gas{
+    border-bottom: none;
+}
+
+.uk-banner-title.uk-article-gas > div:first-child{
+    background-color: rgba(96,189,87,1);
+    color: #ffffff;
+    font-weight: bolder;
+    text-transform: uppercase;
+}
+
+.uk-banner-title.uk-article-gas > div:last-child{
+    border-top: 5px solid rgba(96,189,87,1);
+    color: rgba(96,189,87,1);
+    border-bottom: 1px solid rgba(96,189,87,1);
+    font-weight: lighter;
+    text-transform: uppercase;
+}
+
+.uk-banner-title.uk-article-gas  .uk-dropdown-nav > li > a:hover{
+    background-color: rgba(96,189,87, .6);
+}
+
+/********************************************** couleur culture ***************************************************/
+
+/** Couleur des menus **/
+
+.uk-menu-cul > a, .uk-menu-cul.uk-active > a:hover{
+    font-weight: bolder;
+    color: rgba(46,74,157,.6);
+    border-bottom: 5px solid rgba(46,74,157,.6);
+}
+.uk-menu-cul.uk-active > a, .uk-menu-cul.uk-active > a:hover, .uk-menu-cul > a:hover{
+    color: rgba(46,74,157,1);
+}
+.uk-menu-cul.uk-active > a, .uk-menu-cul.uk-active > a:hover, .uk-menu-cul > a:hover{
+    font-weight: bolder;
+    border-bottom: 5px solid rgba(46,74,157,1);
+}
+
+/*
+    Affichage des couleurs des articles par catégorie
+ */
+
+.uk-article-cul .uk-categorie a{
+
+    color: rgba(46,74,157,1);
+}
+
+.uk-article-cul, .uk-menu-cul.uk-active > a, .uk-menu-cul.uk-active > a:hover, .uk-menu-cul > a:hover{
+    border-bottom: 5px solid rgba(46,74,157,1);
+}
+
+.uk-article-cul.uk-article-horizontal, .uk-article-cul.uk-article-button, .uk-article-cul.uk-button-shared{
+    border: none;
+}
+
+.uk-article-cul .uk-categorie a:before{
+    content: "";
+    height: 10px;
+    width: 10px;
+    background: rgba(46,74,157,1);
+    display: inline-block;
+    margin-right: 5px;
+    border-radius: 50%;
+}
+
+/*
+    Couleur des boutons de la catégorie
+ */
+
+.uk-article-cul.uk-article-button .uk-button-default, .uk-article-cul.uk-button-shared .uk-button-default{
+    background: rgba(46,74,157,1);
+    color: #ffffff;
+    font-weight: bolder;
+    border: none;
+    border-radius: 15px;
+}
+
+.uk-article-cul.uk-button-shared .uk-button-default{
+    border-radius: 0px;
+    color: #ffffff;
+
+}
+
+.uk-article-cul.uk-button-shared .uk-bg-default .uk-icon{
+    color: rgba(46,74,157,1);
+    font-size: 16px;
+    margin-right: 10px;
+}
+
+/*
+    Traitement des articles de la catégorie sous fond gris
+ */
+.uk-background-pc .uk-article-cul{
+    border-top: 5px solid rgba(46,74,157,1);
+    border-bottom: none;
+    padding-top: 20px;
+}
+
+
+/*
+    Affichage du titre des sous catégorie dans la page catégorie
+ */
+
+.uk-banner-title.uk-article-cul{
+    border-bottom: none;
+}
+
+.uk-banner-title.uk-article-cul > div:first-child{
+    background-color: rgba(46,74,157,1);
+    color: #ffffff;
+    font-weight: bolder;
+    text-transform: uppercase;
+}
+
+.uk-banner-title.uk-article-cul > div:last-child{
+    border-top: 5px solid rgba(46,74,157,1);
+    color: rgba(46,74,157,1);
+    border-bottom: 1px solid rgba(46,74,157,1);
+    font-weight: lighter;
+    text-transform: uppercase;
+}
+
+.uk-banner-title.uk-article-cul  .uk-dropdown-nav > li > a:hover{
+    background-color: rgba(46,74,157, .6);
+}
+
+
+.uk-article-meta{
+    color: #000000;
+}
+
+.uk-article .uk-grid-small{
+    font-family: "Open Sans Regular", serif;
+    font-size: 12px;
+}
+
+.uk-article .uk-grid-small a{
+    font-family: "Open Sans Bold", serif;
+}
+
+
+.uk-shared .uk-categorie:before{
+    width: 7px;
+    height: 7px;
+}
+
+
+.uk-button-menu{
+    line-height:28px !important;
+    border: 1px solid #000000;
+    font-weight: bold;
+}
+
+.uk-button-menu:hover{
+    background-color: #000000;
+    color: #ffffff;
+}
+
+.uk-button-menu-reverse{
+    line-height:28px !important;
+    border: 1px solid #ffffff;
+    font-weight: bold;
+}
+
+.uk-button-menu-reverse:hover{
+    background-color: #ffffff !important;
+    color: #000000 !important;
+}
+
+
+.truncate-title {
+    width: 100%;
+    margin: 0 0 1em 0 !important;
+    overflow: hidden;
+    position: relative;
+    height: 2.6em;
+    margin-bottom: 10px !important;
+}
+
+.truncate-title:after {
+    content: "...";
+    text-align: right;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    height: 1.4em;
+    /*width: 0;*/
+    width: 70%;
+    /*height: 1.2em;*/
+    /*background: linear-gradient(to right, rgba(255, 255, 255, 0), rgba(255, 255, 255, 1) 95%);*/
+}
+
+
+.uk-article .uk-link-reset, .uk-article .uk-link-reset:hover{
+    color: #000000 !important;
+}
+
+.uk-article h2{
+    text-transform: uppercase;
+}
+
+.uk-height-content.dotdot{
+    height: 50px;
+    font-family: "Minion Pro", serif;
+}
+.uk-categorie{
+    font-family: "Open Sans Light", serif;
+    font-size: 12px;
+    width: max-content;
+    color: #000000;
+}
+.uk-categorie a{
+    font-family: "Open Sans Bold", serif;
+    font-size:12px;
+}
+
+.uk-shared .uk-categorie a{
+    font-size: 10px;
+}
+
+.uk-hr-custom{
+    height: 7px;
+    background-color: #d9d9d9;
+}
+
+.uk-une{
+    color: #666666;
+    font-family: "Open Sans Bold", serif;
+}
+
+.uk-background-pc{
+    background-color: #686767;
+    color: #fff !important;
+}
+
+.uk-background-pc-2{
+    background-color: #ededed;
+    color: #fff !important;
+}
+
+.uk-background-pc-3{
+    background-color: #e2e0e1;
+    font-family: "Minion Pro", serif;
+    font-weight: bolder;
+}
+
+.uk-background-pc .uk-article .uk-link-reset, .uk-background-pc .uk-article .uk-link-reset:hover, .uk-background-pc .uk-categorie{
+    color: #ffffff !important;
+}
+
+.uk-text-title-reverse{
+    color: #ffffff !important;
+    font-size: 12px !important;
+}
+
+.uk-height-custom{
+    height: 600px;
+}
+
+
+.uk-height-custom-pub{
+    min-height: 20px;
+}
+
+.uk-shared{
+    background-color: #ededed;
+}
+
+.uk-shared thead{
+    background-color: #2d7186;
+    font-family: "Open Sans Bold", serif;
+}
+
+.uk-shared thead th{
+    padding: 10px;
+}
+
+.uk-shared.uk-table td{
+    padding: 13px 0px 13px 12px;
+    vertical-align: top;
+}
+
+.uk-shared.uk-table td:last-child{
+    padding: 13px 12px;
+}
+
+.uk-shared .uk-table-badge{
+    padding: 9px;
+    width: 50px;
+}
+
+.uk-shared tbody tr{
+    padding-top: 10px;
+    border-bottom: 2px solid #e2e0e1;
+}
+
+
+.uk-table .uk-badge-shared{
+    min-width: 30px;
+    height: 30px;
+    line-height: 30px;
+    background-color: #e2e0e1;
+    color: #676566;
+    font-family: "Open Sans Regular", serif;
+}
+
+.uk-gallery{
+    background-color: #0074af;
+}
+
+.uk-gallery-show .uk-grid-margin{
+    margin-top: 10px;
+}
+
+.uk-gallery-show > div > div{
+    height: 114px;
+    background-color: #000000;
+}
+
+.uk-social .uk-subnav > *{
+    padding-left: 10px;
+    font-family: "Open Sans Bold", serif;
+    font-size: 12px;
+    line-height:30px;
+    height: 30px;
+}
+
+.uk-social .uk-icone{
+    color: #000000;
+}
+
+.uk-social .uk-icone a.uk-icon {
+    border: 1px solid #000000;
+    border-radius: 50%;
+    padding: 4px;
+    color: #000000;
+}
+
+.uk-social .uk-icone a.uk-icon:hover{
+    background-color: #000000;
+    color: #ffffff;
+}
+
+.uk-social-reverse .uk-subnav > *{
+    padding-left: 10px;
+}
+
+.uk-social-reverse .uk-icone{
+    color: #ffffff;
+}
+
+.uk-social-reverse .uk-icone a.uk-icon {
+    border: 1px solid #ffffff;
+    border-radius: 50%;
+    padding: 4px;
+    color: #ffffff;
+}
+
+.uk-social-reverse .uk-icone a.uk-icon:hover{
+    background-color: #fff;
+}
+
+.uk-social-reverse .uk-icone svg{
+    fill: white;
+}
+
+.uk-social-reverse .uk-icone a.uk-icon:hover svg{
+    fill: black;
+}
+
+.uk-list-link div{
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 13px;
+}
+
+.uk-list-link div:nth-child(n+2){
+    margin-top: 10px;
+    padding-top: 10px;
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.uk-banner-title .uk-icon{
+    transition-duration: 0.3s;
+}
+
+.uk-banner-title .uk-open .uk-icon{
+    transform: rotate(-90deg);
+}
+
+
+.uk-banner-title .uk-dropdown{
+    min-width: 100%;
+    background-color: #ededed;
+    padding: 0;
+}
+
+.uk-banner-title .uk-dropdown-nav{
+    text-transform:capitalize;
+    color: #000000;
+    white-space: normal;
+    font-size: 12px;
+}
+.uk-banner-title .uk-dropdown-nav > li a{
+    padding: 10px;
+}
+
+.uk-banner-title .uk-dropdown-nav > li.uk-nav-divider{
+    margin: 0;
+    padding: 0;
+}
+
+.uk-banner-title .uk-dropdown-nav > li > a{
+    color: #666666;
+    font-family: "Open Sans Regular", serif;
+    font-weight: normal;
+}
+
+
+.uk-article-date{
+    font-family: "Open Sans Light", serif;
+    color: #666666;
+    font-size: 13px;
+}
+
+.uk-button-shared a:hover, .uk-button-shared .uk-link:hover{
+    color: inherit;
+}
+
+.uk-button-shared .uk-bg-default{
+    background-color: #e2e0e1;
+    border-right: 1px solid #eeeeee;
+}
+
+.uk-button-shared .uk-button{
+    padding: 0 20px;
+    font-size: 12px;
+}
+
+.uk-similaire{
+    border-bottom-width: 3px;
+}
+
+.uk-comments-header > div:last-child{
+    background-color: #f0f0f0;
+    color: #000000 !important;
+    border-bottom: none !important;
+}
+
+.uk-image-resize{
+    width: 90px;
+    height: 90px;
+}
+
+.uk-comments-body > div .uk-button-reponse{
+    display: none;
+    background-color: #959595;
+    border-radius: 10px;
+    color: #ffffff;
+    font-size: 12px;
+    text-transform: capitalize;
+    line-height: 30px;
+}
+
+.uk-comments-body > div.uk-comments:hover{
+    background-color: #f0f0f0;
+}
+
+.uk-comments-body > div:hover .uk-button-reponse{
+    display: inline-block;
+}
+
+

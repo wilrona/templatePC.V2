@@ -1,0 +1,108 @@
+body{
+    /* width: 100%; */
+    min-height: 100%;
+    font-family: "Open Sans", sans-serif;
+    font-size: 16px;
+    /*line-height: 1.42857143;*/
+    color: #000000;
+    font-weight: normal;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+
+}
+
+h1,
+.uk-h1,
+h2,
+.uk-h2,
+h3,
+.uk-h3,
+h4,
+.uk-h4,
+h5,
+.uk-h5,
+h6,
+.uk-h6{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    /*line-height: 1.1;*/
+    color: #000000;
+}
+
+
+.uk-logo{
+    width: 150px;
+}
+
+.uk-menu .uk-navbar-nav > li > a{
+    height: auto;
+    padding: 0 15px;
+    text-transform: capitalize;
+    /*color: #ffffff;*/
+    font-weight: bold;
+    /*border: 1px solid #ffffff;*/
+    border-radius: 50px;
+}
+
+
+.uk-slider .uk-overlay-primary{
+    background-color: rgba(10, 27, 49, 0.8);
+}
+
+.uk-slider .uk-heading-primary{
+    font-weight: lighter;
+    color: #ffffff;
+}
+
+
+.uk-slider .uk-slask{
+    font-size: 150px;
+    color: #ffffff;
+    line-height: 80px;
+    display: inline-block;
+
+}
+
+.uk-slider .uk-date{
+    font-size: 30px;
+    line-height: 40px;
+    height: 100%;
+    color: #ffffff;
+    display: inline-block;
+}
+
+.uk-slider .uk-date span:first-child{
+    font-weight: bolder;
+    font-size: 100px;
+    line-height: 50px;
+}
+
+.uk-pass .uk-description{
+    color: #ffffff !important;
+}
+
+.uk-pass .uk-button-pass{
+    border-radius: 50px;
+}
+
+
+.uk-tweeter .uk-description{
+    font-family: "Open Sans", sans-serif;
+    font-size: 12px;
+    text-transform: uppercase;
+    font-weight: bold;
+
+}
+
+.uk-tweeter .uk-ico{
+    font-size: 40px;
+}
+
+.uk-tweeter .uk-title{
+    font-weight: 400;
+    font-size: 25px;
+}
+
+.uk-run .uk-content-right{
+    font-family: "Open Sans", sans-serif;
+}
