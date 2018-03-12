@@ -72,7 +72,7 @@
                                         while ($the_query_mag->have_posts()): $the_query_mag->the_post();
                                             ?>
 									<div>
-                                        <a href="<?php tr_posts_field("url") ?>" target="_blank"><?php echo wp_get_attachment_image(tr_posts_field("img_longue"), 'full', false, array('class' => 'uk-img-pc')); ?></a>
+                                        <a href="<?= tr_posts_field("url") ?>" target="_blank"><?php echo wp_get_attachment_image(tr_posts_field("img_longue"), 'full', false, array('class' => 'uk-img-pc')); ?></a>
 									</div>
 	                                        <?php
                                         endwhile;
@@ -82,7 +82,7 @@
 							</div>
 							<div class="uk-flex uk-flex-middle">
 								<div class="uk-margin-large-left">
-									<a href="<?php tr_options_field('pc_options.issuu_link'); ?>" class="uk-button uk-button-text"><span>Lire plus de numero</span> <span class="uk-text-bold">en ligne</span></a>
+									<a href="<?= tr_options_field('pc_options.issuu_link'); ?>" class="uk-button uk-button-text"><span>Lire plus de numero</span> <span class="uk-text-bold">en ligne</span></a>
 									<a href="#modal-center" uk-toggle class="uk-button uk-button-default uk-button-menu uk-display-block uk-margin-small">Abonnez-vous</a>
 								</div>
 							</div>

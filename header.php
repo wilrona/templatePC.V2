@@ -99,7 +99,7 @@
                             while ($the_query_mag->have_posts()): $the_query_mag->the_post();
                         ?>
                             <div class="uk-padding-small">
-                                <a href="<?php tr_posts_field("url") ?>" target="_blank"><?php echo wp_get_attachment_image(tr_posts_field("img_courte"), 'full', false, array('class' => 'uk-img-pc')); ?></a>
+                                <a href="<?= tr_posts_field("url") ?>" target="_blank"><?php echo wp_get_attachment_image(tr_posts_field("img_courte"), 'full', false, array('class' => 'uk-img-pc')); ?></a>
                             </div>
                         <?php
                             endwhile;
