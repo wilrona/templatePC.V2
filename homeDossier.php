@@ -20,7 +20,7 @@ $dossier = $actuel_dossier;
 
 	</div>
 	<div class="uk-card-body uk-padding-remove-horizontal">
-		<div class="uk-grid-small uk-child-width-1-3 uk-margin" uk-grid>
+		<div class="uk-grid-small uk-child-width-1-3@m uk-child-width-1-1@s uk-margin" uk-grid>
 			<?php foreach ($dossier as $content):   ?>
 
 				<?php $post = get_post($content['dossier']);   ?>

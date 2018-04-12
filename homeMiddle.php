@@ -10,7 +10,7 @@
 
 
 <div class="uk-grid-small" uk-grid>
-	<div class="uk-width-2-3">
+	<div class="uk-width-2-3@l uk-width-1-1@s">
 		<div class="uk-margin uk-pub">
 			<?php
 				if( function_exists('the_ad_placement') ) { the_ad_placement('home-middle'); }
@@ -62,7 +62,7 @@
 			</div>
 		<?php endif; ?>
 	</div>
-	<div class="uk-width-1-3">
+	<div class="uk-width-1-3 uk-visible@l">
 		<?php get_template_part( 'populaireWidget' ); ?>
 	</div>
 </div>

@@ -37,7 +37,7 @@
 		<?php get_template_part( 'homeFestival' ); ?>
 
 
-		<div class="uk-background-default uk-padding-small">
+		<div class="uk-background-default uk-padding-small uk-after-festival">
 			<?php get_template_part( 'homeMiddle' ); ?>
 
 			<div class="uk-margin uk-pub">
@@ -57,7 +57,7 @@
 						<h3 class="uk-card-title"><span>Lire plus de numero</span> <span class="uk-text-bold">en ligne</span></h3>
 					</div>
 					<div class="uk-card-body">
-						<div class="uk-grid-small uk-child-width-1-2" uk-grid>
+						<div class="uk-grid-small uk-child-width-1-2@m uk-child-width-1-1@s" uk-grid>
 							<div>
 								<div class="uk-grid-small uk-child-width-1-2" uk-grid>
                                     <?php

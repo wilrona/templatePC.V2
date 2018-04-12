@@ -15,6 +15,20 @@ jQuery(document).ready(function() {
         // autoplayTimeout:3000,
         // autoplayHoverPause:true,
         // smartSpeed: 5000
+        responsive:{
+            0:{
+                items:1
+            },
+            600:{
+                items:3,
+                nav:false
+            },
+            1000:{
+                items:5,
+                nav:true,
+                loop:false
+            }
+        }
     });
     jQuery('#owl-carousel-partenaire').owlCarousel({
         loop:true,

@@ -19,14 +19,14 @@
 		<h1 class="page-header"><?= $data['titreagenda'] ?></h1>
 		<?php endif; ?>
 		<div id="main" class="uk-margin" uk-grid>
-			<div class="uk-width-1-2">
+			<div class="uk-width-1-2@m uk-width-1-1@s">
 				<h2 id="point-title" class="inline-block underline"></h2>
 				<p id="point-desc"></p>
 
 				<h2 id="speakers-title" class="inline-block underline hidden">Intervenants</h2>
 				<div id="speakers"></div>
 			</div>
-			<div id="timeline" class="uk-width-1-2"></div>
+			<div id="timeline" class="uk-width-1-2@m uk-width-1-1@s"></div>
 		</div>
 	</div>
 </div>

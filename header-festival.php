@@ -42,6 +42,27 @@
 </head>
 
 <body>
+<div class="uk-offcanvas-content">
+
+    <div id="offcanvas-usage" uk-offcanvas="overlay: true">
+        <div class="uk-offcanvas-bar uk-flex uk-flex-column uk-home-festival">
+
+            <a href="<?= home_url() ?>" class="uk-logo">
+                <img src="<?php echo get_template_directory_uri(); ?>/image/logo.png" alt="" style="height: 70px;">
+            </a>
+
+            <ul class="uk-nav uk-nav-primary uk-nav-center uk-margin-auto-vertical">
+                <li><a href="<?= home_url() ?>" style="color: <?= tr_posts_field('colortexte'); ?>; border: 1px solid <?= tr_posts_field('colorbordertexte'); ?>">Accueil</a></li>
+                <?php foreach (tr_posts_field('rubrique') as $rubrique): ?>
+                    <li><a href="<?= $rubrique["lienrubrique"] ?>" uk-scroll style="color: <?= tr_posts_field('colortexte'); ?>; border: 1px solid <?= tr_posts_field('colorbordertexte'); ?>"><?= $rubrique["titremenu"] ?></a></li>
+                <?php endforeach; ?>
+            </ul>
+
+
+        </div>
+    </div>
+
+    <div class="uk-home-festival">
 
 
 <?php while ( have_posts() ) : the_post(); ?>
@@ -49,22 +70,25 @@
 
         <div class="uk-container uk-container-small">
             <nav class="uk-navbar uk-height-small uk-padding uk-padding-remove-horizontal" uk-navbar>
+                    <div class="uk-navbar-left uk-margin-medium-top">
+                        <a href="<?php get_the_permalink() ?>" class="uk-navbar-item uk-logo">
+			                <?=  get_the_post_thumbnail( get_the_ID(), 'full', array('class' => 'uk-responsive-height'));?>
+                        </a>
+                    </div>
 
-
-                <div class="uk-navbar-left uk-margin-medium-top">
-                    <a href="<?php get_the_permalink() ?>" class="uk-navbar-item uk-logo">
-                        <?=  get_the_post_thumbnail( get_the_ID(), 'full', array('class' => 'uk-responsive-height'));?>
-                    </a>
-                </div>
-
-                <div class="uk-navbar-center uk-margin-medium-top">
-                    <ul class="uk-navbar-nav">
-                        <?php foreach (tr_posts_field('rubrique') as $rubrique): ?>
-                            <li><a href="<?= $rubrique["lienrubrique"] ?>" uk-scroll style="color: <?= tr_posts_field('colortexte'); ?>; border: 1px solid <?= tr_posts_field('colorbordertexte'); ?>"><?= $rubrique["titremenu"] ?></a></li>
-                        <?php endforeach; ?>
-                    </ul>
-                </div>
-
+                    <div class="uk-navbar-center uk-margin-medium-top">
+                        <ul class="uk-navbar-nav uk-visible@m">
+                            <li><a href="<?= home_url() ?>" style="color: <?= tr_posts_field('colortexte'); ?>; border: 1px solid <?= tr_posts_field('colorbordertexte'); ?>">Accueil</a></li>
+			                <?php foreach (tr_posts_field('rubrique') as $rubrique): ?>
+                                <li><a href="<?= $rubrique["lienrubrique"] ?>" uk-scroll style="color: <?= tr_posts_field('colortexte'); ?>; border: 1px solid <?= tr_posts_field('colorbordertexte'); ?>"><?= $rubrique["titremenu"] ?></a></li>
+			                <?php endforeach; ?>
+                        </ul>
+                        <div class="uk-flex uk-flex-center uk-flex-middle uk-hidden@l uk-width-1-1">
+                            <div style="padding-top: 25px">
+                                <a class="uk-navbar-toggle uk-background-default" uk-navbar-toggle-icon href="#" uk-toggle="target: #offcanvas-usage" style="height: 50px;"></a>
+                            </div>
+                        </div>
+                    </div>
 
             </nav>
         </div>

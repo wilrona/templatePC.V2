@@ -18,7 +18,7 @@
 		<div class="uk-background-default uk-padding-small">
 			<div class="uk-panel uk-padding uk-heading-categorie">
 				<div class="uk-grid-small" uk-grid>
-					<div class="uk-width-1-2">
+					<div class="uk-width-1-2@m uk-width-1-1">
 						<h2 class="uk-h4 uk-heading uk-text-uppercase"><?php the_title(); ?></h2>
 					</div>
 
@@ -29,7 +29,7 @@
 
 			<div class="uk-card uk-card-default uk-grid-collapse uk-margin" uk-grid>
 
-				<div class="uk-width-3-5">
+				<div class="uk-width-3-5@m uk-width-1-1 uk-flex-last">
 					<div class="uk-card-body uk-border-top">
 
 						<h2 class="uk-h3 uk-animation-slide-bottom-small uk-text-uppercase"><?php the_title(); ?></h2>
@@ -43,7 +43,7 @@
 						</div>
 					</div>
 				</div>
-				<div class="uk-card-media-right uk-cover-container uk-width-2-5">
+				<div class="uk-card-media-right uk-cover-container uk-width-2-5@m uk-width-1-1">
 					<?=  get_the_post_thumbnail( get_the_ID(), 'full', array('class' => '', 'uk-cover'=> ''));?>
 					<canvas width="600" height="400"></canvas>
 				</div>

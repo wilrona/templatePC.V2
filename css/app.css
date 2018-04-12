@@ -234,7 +234,7 @@ h6,
     width: 15px;
     display: inline-block;
     margin-right: 5px;
-    margin-top: 5px;
+    /*margin-top: 5px;*/
 }
 
 .uk-table .uk-article-titre-categorie{
@@ -398,9 +398,10 @@ h6,
     color: #000000;
 }
 
-.uk-heading-categorie .uk-heading{
+.uk-heading-categorie .uk-heading, .uk-heading-categorie .uk-heading .uk-heading{
     font-family: "Montserrat", sans-serif;
     font-weight:lighter;
+    margin-bottom: 0 !important;
 }
 
 
@@ -493,4 +494,108 @@ h6,
 
 .uk-background-secondary.uk-active{
     color: #ffffff;
+}
+
+@media (max-width: 731px) {
+
+    .uk-body{
+        padding-bottom: 0 !important;
+    }
+
+    .uk-menu .uk-navbar-nav > li{
+        padding: 0 6px !important;
+    }
+
+    .uk-block-logo{
+        margin: 0 !important;
+    }
+
+    .uk-offcanvas-bar .uk-nav-primary > li > a {
+        color: rgba(0, 0, 0, 0.5) !important;
+    }
+
+    .uk-block-logo .uk-logo img{
+        height: 50px !important;
+    }
+
+    .uk-body .uk-container{
+        padding-left: 0px;
+         padding-right: 0px;
+    }
+
+    .uk-cover-mobile{
+        padding:  0 !important;
+        padding-bottom: 10px !important;
+    }
+    .uk-cover-mobile .article-cover{
+        font-size: 20px !important;
+    }
+
+    .uk-card-img img{
+        height: 100%;
+    }
+
+    .uk-festival .uk-countdown-custom{
+        padding: 10px 20px !important;
+    }
+    .uk-festival .uk-logo{
+        margin-left: 20px !important;
+    }
+
+    .uk-after-festival{
+        padding: 0 !important;
+    }
+
+    .uk-footer .uk-border{
+        padding: 15px 0 15px 0px !important;
+        margin: 0 20px !important;
+    }
+
+    .uk-offcanvas-bar{
+        background-color: #fff !important;
+        color: rgba(0, 0, 0, 0.7);;
+    }
+
+    .uk-categorie{
+        padding: 0 !important;
+    }
+
+    .uk-categorie .uk-heading-categorie{
+        padding: 15px !important;
+    }
+    .uk-article-titre-categorie{
+        margin-top: 0 !important;
+    }
+
+
+    .uk-home-festival .uk-menu .uk-height-small{
+        height: 100%;
+
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        display: flex;
+        -ms-flex-wrap: wrap;
+        -webkit-flex-wrap: wrap;
+        flex-wrap: wrap;
+        margin: 0;
+        padding: 0;
+        list-style: none;
+    }
+
+    .uk-home-festival .uk-menu .uk-height-small .uk-navbar-left{
+        width: 50%;
+        margin-top: 0 !important;
+        padding: 20px 0 !important;
+    }
+
+    .uk-home-festival .uk-menu .uk-height-small .uk-navbar-center{
+        position: relative;
+        width: auto;
+    }
+
+    .uk-home-festival .uk-logo{
+        width: auto;
+    }
+
+
 }

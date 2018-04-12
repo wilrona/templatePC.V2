@@ -2,15 +2,15 @@
 
 
     <div class="uk-section uk-section-small uk-section-secondary uk-footer uk-flex uk-flex-center">
-        <div class="uk-margin uk-grid-small uk-width-5-6" uk-grid>
-            <div class="uk-width-1-3">
+        <div class="uk-margin uk-grid-small uk-width-5-6@m uk-width-1-1@s" uk-grid>
+            <div class="uk-width-1-3@m uk-width-1-1@s">
                 <img src="<?php echo get_template_directory_uri(); ?>/image/logo-w.png" alt="" class="uk-display-block uk-margin-auto uk-margin" style="height: 50px">
                 <div class="uk-width-1-1 uk-flex uk-flex-center uk-padding-small uk-padding-remove-vertical uk-margin-small">
                     <a href="#modal-center" uk-toggle class="uk-button uk-button-default uk-button-menu-reverse uk-button-small">Abonnez-vous</a>
                 </div>
             </div>
 
-            <div class="uk-width-2-5">
+            <div class="uk-width-2-5@m uk-width-1-1@s">
                 <div class="uk-grid-small uk-margin-large-top uk-border" uk-grid>
                     <div class="uk-width-1-3">
 	                    <?php
@@ -38,8 +38,8 @@
                     </div>
                 </div>
             </div>
-            <div class="uk-width-1-4">
-                <div class="uk-social-reverse">
+            <div class="uk-width-1-4@m uk-width-1-1@s">
+                <div class="uk-social-reverse uk-flex uk-flex-center uk-flex-left@m">
                     <ul class="uk-subnav uk-icone uk-padding-remove-vertical uk-margin-remove uk-margin-small">
                         <li><a href="<?=  tr_options_field('pc_options.facebook'); ?>" uk-icon="icon: facebook" class="uk-icon" target="_blank"></a></li>
                         <li><a href="<?=  tr_options_field('pc_options.instagram'); ?>" uk-icon="icon: instagram" class="uk-icon" target="_blank"></a></li>
@@ -51,6 +51,8 @@
     </div>
 
     </div>
+</div>
+
 </div>
 
 

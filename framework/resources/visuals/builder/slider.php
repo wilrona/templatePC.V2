@@ -9,7 +9,7 @@
 ?>
 <?php if(!empty($data['slider'])): ?>
 	<div id="<?= $data['idblockslider'] ?>" class="uk-slider">
-		<div class="uk-position-relative uk-visible-toggle uk-light" uk-slideshow="ratio: 7:3; animation: push; autoplay: true">
+		<div class="uk-position-relative uk-visible-toggle uk-light" uk-slideshow="ratio: 7:3; animation: push; autoplay: true; min-height: 400;">
 
 			<ul class="uk-slideshow-items">
 
@@ -21,7 +21,7 @@
 					<div class="uk-overlay uk-overlay-primary uk-position-cover uk-flex-middle uk-flex">
 						<div class="uk-container uk-container-small uk-width-4-5">
 							<div class="uk-grid-large" uk-grid>
-								<div class="uk-width-2-3">
+								<div class="uk-width-2-3@m uk-width-1-1@s">
 									<div class="uk-heading-primary uk-text-center"><?= $slider['text']; ?></div>
 									<?php if(!empty($slider['lienpass']) && !empty($slider['messagepass'])): ?>
 									<div class="uk-margin-medium uk-flex uk-flex-center">
@@ -29,7 +29,7 @@
 									</div>
 									<?php endif; ?>
 								</div>
-								<div class="uk-width-1-3 uk-left">
+								<div class="uk-width-1-3@m uk-width-1-1@s uk-left">
 									<div class="uk-slask">/</div>
 									<div class="uk-date"><span><?= $slider['jour'] ?></span> <br> <span class="uk-text-uppercase"><?= $slider['mois'] ?></span> <?= $slider['annee'] ?></div>
 

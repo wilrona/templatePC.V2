@@ -11,13 +11,16 @@ $currentcat = get_category( get_query_var( 'cat' ) );
 ?>
 
 <?php get_header(); ?>
-	<div class="uk-background-default uk-padding-small">
+
+    <?php set_query_var( 'actuel_dossier', tr_posts_field('actuellement_sur_dossier') ) ?>
+
+	<div class="uk-background-default uk-padding-small uk-categorie">
 		<div class="uk-panel uk-padding uk-heading-categorie">
 			<div class="uk-grid-small" uk-grid>
-				<div class="uk-width-1-4">
+				<div class="uk-width-1-4@m uk-width-1-3">
 					<h2 class="uk-h4 uk-heading uk-text-uppercase"><?= single_cat_title( '', false ) ?></h2>
 				</div>
-				<div class="uk-width-3-4">
+				<div class="uk-width-3-4@m uk-width-2-3 uk-flex uk-flex-middle">
 					<div class="uk-child-width-auto uk-grid-small" uk-grid>
 						<?php
 							$catlist_exclus = get_categories(
@@ -71,7 +74,7 @@ $currentcat = get_category( get_query_var( 'cat' ) );
 
 					foreach ($posts as $post):
 			?>
-			<div class="uk-width-1-2">
+			<div class="uk-width-1-2@m uk-width-1-1@s">
 				<div class="uk-card uk-card-default uk-card-small uk-card-article">
 					<div class="uk-card-media-top">
 						<?=  get_the_post_thumbnail( $post->ID, 'full');?>
@@ -88,8 +91,8 @@ $currentcat = get_category( get_query_var( 'cat' ) );
 					endforeach; endif; ?>
 		</div>
 		<div class="uk-grid-small" uk-grid>
-			<div class="uk-width-2-3">
-				<div class="uk-grid-small uk-child-width-1-2 uk-margin" uk-grid>
+			<div class="uk-width-2-3@m uk-width-1-1@s">
+				<div class="uk-grid-small uk-child-width-1-2 uk-child-width-1-1@s uk-margin" uk-grid>
 
 					<?php
 						$args2 = array(
@@ -146,7 +149,7 @@ $currentcat = get_category( get_query_var( 'cat' ) );
 					<a href="" class="uk-button uk-button-secondary loadmore">+ de "sous catégorie"</a>
 				</div>
 			</div>
-			<div class="uk-width-1-3">
+			<div class="uk-width-1-3 uk-visible@m">
 				<?php get_template_part( 'pubAndSocial' ); ?>
 				<?php get_template_part( 'populaireWidget' ); ?>
 			</div>

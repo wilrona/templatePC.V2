@@ -19,7 +19,7 @@
 		<div class="uk-background-default uk-padding-small">
 			<div class="uk-panel uk-padding uk-heading-categorie">
 				<div class="uk-grid-small" uk-grid>
-					<div class="uk-width-1-2">
+					<div class="uk-width-1-2@m uk-width-1-1">
 						<h2 class="uk-h4 uk-heading uk-text-uppercase"><?php the_title(); ?></h2>
 					</div>
 
@@ -36,7 +36,7 @@
 
 			<div class="uk-card uk-card-small" >
 				<div class="uk-card-body uk-padding-remove">
-					<div class="uk-child-width-1-2 uk-grid-small" uk-grid>
+					<div class="uk-child-width-1-2@m uk-child-width-1-1 uk-grid-small" uk-grid>
 
 						<?php foreach($contenu as $content): ?>
 						<div class="">

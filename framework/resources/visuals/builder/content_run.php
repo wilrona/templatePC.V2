@@ -8,7 +8,7 @@
 ?>
 <div id="<?= $data['idblockcontenu'] ?>" class="uk-section uk-padding-remove uk-run">
 	<div class="uk-grid-collapse" uk-grid>
-		<div class="uk-width-2-3">
+		<div class="uk-width-2-3@m uk-width-1-1@s">
 			<div class="uk-position-relative uk-visible-toggle uk-light" uk-slideshow="animation: fade; autoplay: true; max-height: 300">
 
 				<ul class="uk-slideshow-items">
@@ -24,7 +24,7 @@
 
 			</div>
 		</div>
-		<div class="uk-width-1-3">
+		<div class="uk-width-1-3@m uk-width-1-1@s">
 			<div class="uk-padding uk-content-right uk-height-medium uk-height-max-medium" style="background-color: <?= $data['bgcolor']; ?>">
 				<div class="uk-h3" style="color: <?= $data['colortitle'] ?>;"><?= $data['titrecontenu'] ?></div>
 				<div class="uk-text-small uk-margin" style="color: <?= $data['colortexte']; ?>">

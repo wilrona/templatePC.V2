@@ -9,7 +9,7 @@
 ?>
 <div id="<?= $data['idblockpresentation'] ?>" class="uk-section uk-section-large uk-representation" style="background-color: <?= $data['fondcolorpresentation'] ?>; color: <?= $data['colortextpresentation'] ?> ;">
 	<div class="uk-container uk-container-small">
-		<div class="uk-column-1-2">
+		<div class="uk-column-1-2@l uk-column-1-1@s">
 			<?= wpautop($data['contentpresentation']); ?>
 		</div>
 	</div>

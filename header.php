@@ -44,21 +44,44 @@
 
 ?>
 <body style="background-color: <?= $color ?>;">
+<div class="uk-offcanvas-content">
+
+    <div id="offcanvas-usage" uk-offcanvas="overlay: true">
+        <div class="uk-offcanvas-bar uk-flex uk-flex-column">
+
+            <a href="<?= home_url() ?>" class="uk-logo">
+                <img src="<?php echo get_template_directory_uri(); ?>/image/logo.png" alt="" style="height: 70px;">
+            </a>
+
+	        <?php
+	        $menu_arg = array(
+		        'container'       => false,
+		        'container_class' => '',
+		        'menu_class' => 'uk-nav uk-nav-primary uk-nav-center uk-margin-auto-vertical',
+		        'theme_location' => 'header-nav',
+		        'items_wrap' =>'<ul id="%1$s" class="%2$s">%3$s</ul>',
+	        );
+	        wp_nav_menu($menu_arg);
+	        ?>
+
+
+        </div>
+    </div>
 <?php
     $imgid = tr_options_field('pc_options.bgimg');
 ?>
-<div class="uk-padding-large uk-padding-remove-horizontal" style="background-image:url('<?php echo wp_get_attachment_url($imgid); ?>'); background-repeat: no-repeat; background-size: contain;">
+<div class="uk-padding-large uk-padding-remove-horizontal uk-body" style="background-image:url('<?php echo wp_get_attachment_url($imgid); ?>'); background-repeat: no-repeat; background-size: contain;">
 
 	<div class="uk-container uk-container-small uk-menu  uk-padding-medium uk-margin-large-top">
 		<nav class="uk-navbar uk-padding-small  uk-background-default uk-padding-remove-horizontal" uk-navbar="">
 			<div class="uk-navbar-left uk-width-3-4 uk-padding-small uk-padding-remove-vertical">
-				<div class="uk-display-block uk-width-1-1 uk-margin-top">
+				<div class="uk-display-block uk-block-logo uk-width-1-1 uk-margin-top">
 					<a href="<?= home_url() ?>" class="uk-logo">
 						<img src="<?php echo get_template_directory_uri(); ?>/image/logo.png" alt="" style="height: 70px;">
 					</a>
 				</div>
-				<div class="uk-hr uk-width-1-1 uk-hr-heading"></div>
-				<div class="uk-flex uk-flex-right uk-width-1-1">
+				<div class="uk-hr uk-width-1-1 uk-hr-heading uk-visible@m"></div>
+				<div class="uk-flex uk-flex-right uk-width-1-1 uk-visible@m">
 					<?php
                         $menu_arg = array(
                             'container'       => false,
@@ -74,7 +97,7 @@
 			<div class="uk-navbar-right uk-width-1-4 uk-flex uk-flex-center">
 				<div class="uk-width-1-1">
 					<div class="uk-grid-collapse" uk-grid>
-						<div class="uk-width-expand">
+						<div class="uk-width-expand uk-visible@m">
 							<ul class="uk-subnav uk-icone uk-padding-remove-vertical uk-margin-remove">
 								<li><a href="<?=  tr_options_field('pc_options.facebook'); ?>" uk-icon="icon: facebook" class="uk-icon" target="_blank"></a></li>
 								<li><a href="<?=  tr_options_field('pc_options.instagram'); ?>" uk-icon="icon: instagram" class="uk-icon" target="_blank"></a></li>
@@ -83,10 +106,13 @@
 						<div class="uk-width-auto">
 							<ul class="uk-navbar-nav uk-icone uk-icone-noborder">
 								<li><a href="#modal-full" uk-icon="icon: search" class="uk-icon" uk-toggle></a></li>
+								<li class="uk-hidden@m">
+                                    <a class="uk-navbar-toggle" uk-navbar-toggle-icon href="#" uk-toggle="target: #offcanvas-usage"></a>
+                                </li>
 							</ul>
 						</div>
 					</div>
-					<div class="uk-grid-collapse uk-child-width-1-2 uk-margin-remove" uk-grid>
+					<div class="uk-grid-collapse uk-child-width-1-2 uk-margin-remove uk-visible@m" uk-grid>
                         <?php
                         $args = array(
 	                        'post_type' => 'magazine',
@@ -107,7 +133,7 @@
                         ?>
 					</div>
 				</div>
-				<div class="">
+				<div class="uk-visible@m">
 					<a href="#modal-center" uk-toggle class="uk-button uk-button-default uk-button-menu uk-display-block">Abonnez-vous</a>
 				</div>
 			</div>
@@ -116,7 +142,7 @@
 		<div id="modal-full" class="uk-modal-full uk-modal uk-modal-search" uk-modal="">
 			<div class="uk-modal-dialog uk-flex uk-flex-center uk-flex-middle" uk-height-viewport>
 				<button class="uk-modal-close-full" type="button" uk-close></button>
-				<form class="uk-search uk-search-large uk-width-1-2 uk-box-shadow-small" action="<?php echo esc_url( home_url( '/' ) ); ?>" method="get">
+				<form class="uk-search uk-search-large uk-width-1-2@l uk-width-1-1@s uk-box-shadow-small" action="<?php echo esc_url( home_url( '/' ) ); ?>" method="get">
 					<input class="uk-search-input uk-text-center" type="search" name="s" placeholder="Recherche sur le site ..." autofocus value="<?php the_search_query(); ?>">
 				</form>
 			</div>

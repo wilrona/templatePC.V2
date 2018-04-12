@@ -12,11 +12,11 @@
 			<div class="uk-description uk-width-1-1 uk-margin">
 				<?= wpautop($data['contenuprice']); ?>
 			</div>
-			<div class="uk-width-1-2">
-				<img class="uk-responsive-height" src="<?php echo wp_get_attachment_image_url($data['imgleftprice'], 'full') ?>" alt="">
+			<div class="uk-width-1-2@m uk-width-1-1@s">
+				<img class="uk-responsive-height uk-responsive-width" src="<?php echo wp_get_attachment_image_url($data['imgleftprice'], 'full') ?>" alt="">
 			</div>
-			<div class="uk-width-1-2">
-				<img class="uk-responsive-height" src="<?php echo wp_get_attachment_image_url($data['imgrightprice'], 'full') ?>" alt="">
+			<div class="uk-width-1-2@m uk-width-1-1@s">
+				<img class="uk-responsive-height uk-responsive-width" src="<?php echo wp_get_attachment_image_url($data['imgrightprice'], 'full') ?>" alt="">
 			</div>
 			<?php if($data['bordertextlink'] && $data['colortextlink'] && $data['linktext']): ?>
 				<div class="uk-width-1-1 uk-flex uk-flex-center uk-margin-large-top">
