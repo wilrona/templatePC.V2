@@ -26,8 +26,10 @@ $dossier = $actuel_dossier;
 				<?php $post = get_post($content['dossier']);   ?>
 					<div>
 						<div class="uk-card uk-card-default uk-card-small uk-card-article">
-							<div class="uk-card-media-top">
-								<?=  get_the_post_thumbnail( $post->ID, 'full');?>
+							<div class="uk-card-media-top uk-cover-container">
+                                <img src="<?= get_the_post_thumbnail_url($post->ID, 'full')?>" alt="" uk-cover>
+                                <!--												--><?//=  get_the_post_thumbnail( $the_query->ID, 'full');?>
+                                <canvas width="600" height="400"></canvas>
 							</div>
 							<div class="uk-card-body">
 								<div class="uk-grid-collapse" uk-grid>

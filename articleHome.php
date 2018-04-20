@@ -84,8 +84,10 @@
 							<div class="uk-width-1-2@m uk-width-1-1@s">
 								<div class="uk-card uk-card-default uk-card-small uk-card-article uk-grid-collapse uk-child-width-1-2 uk-child-width-1-1@s" uk-grid>
 
-                                    <div class="uk-card-media-top uk-card-img">
-                                        <?=  get_the_post_thumbnail( $post->ID, 'full');?>
+                                    <div class="uk-card-media-top uk-card-img uk-cover-container">
+                                        <img src="<?= get_the_post_thumbnail_url($post->ID, 'full')?>" alt="" uk-cover>
+                                        <!--												--><?//=  get_the_post_thumbnail( $the_query->ID, 'full');?>
+                                        <canvas width="600" height="400"></canvas>
                                     </div>
                                     <div class="uk-card-body">
                                         <div class="uk-grid-collapse" uk-grid>
@@ -159,8 +161,10 @@
 
 									<div class="uk-width-1-2@m uk-width-1-1@s">
 										<div class="uk-card uk-card-default uk-card-small uk-card-article uk-grid-collapse uk-child-width-1-2 uk-child-width-1-1@s" uk-grid>
-											<div class="uk-card-media-top uk-card-img">
-												<?=  get_the_post_thumbnail( $the_query->ID, 'full');?>
+											<div class="uk-card-media-top uk-card-img uk-cover-container">
+                                                <img src="<?= get_the_post_thumbnail_url($post->ID, 'full')?>" alt="" uk-cover>
+<!--												--><?//=  get_the_post_thumbnail( $the_query->ID, 'full');?>
+                                                <canvas width="600" height="400"></canvas>
 											</div>
 											<div class="uk-card-body">
 												<div class="uk-grid-collapse" uk-grid>

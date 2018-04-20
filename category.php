@@ -76,9 +76,11 @@ $currentcat = get_category( get_query_var( 'cat' ) );
 			?>
 			<div class="uk-width-1-2@m uk-width-1-1@s">
 				<div class="uk-card uk-card-default uk-card-small uk-card-article">
-					<div class="uk-card-media-top">
-						<?=  get_the_post_thumbnail( $post->ID, 'full');?>
-					</div>
+                    <div class="uk-card-media-top uk-cover-container">
+                        <img src="<?= get_the_post_thumbnail_url($post->ID, 'full')?>" alt="" uk-cover>
+                        <!--												--><?//=  get_the_post_thumbnail( $the_query->ID, 'full');?>
+                        <canvas width="600" height="400"></canvas>
+                    </div>
 					<div class="uk-card-body">
 						<div class="uk-article-meta uk-categorie"><a href="<?= get_category_link(get_the_category($post->ID)[0]->term_id);?>" class="uk-text-uppercase uk-text-bold uk-animation-shake" style="color: <?=  tr_taxonomies_field('couleur_cat', 'category', get_the_category($post->ID)[0]->term_id); ?>;"><?= get_the_category($post->ID)[0]->name; ?></a></div>
 						<h2 class="uk-article-titre uk-text-uppercase uk-h5 uk-text-truncate uk-margin-remove"><a href="<?php the_permalink($post->ID) ?>"><?php the_title() ?></a> </h2>
@@ -92,7 +94,7 @@ $currentcat = get_category( get_query_var( 'cat' ) );
 		</div>
 		<div class="uk-grid-small" uk-grid>
 			<div class="uk-width-2-3@m uk-width-1-1@s">
-				<div class="uk-grid-small uk-child-width-1-2 uk-child-width-1-1@s uk-margin" uk-grid>
+				<div class="uk-grid-small uk-child-width-1-2@m uk-child-width-1-1@s uk-margin" uk-grid>
 
 					<?php
 						$args2 = array(
@@ -119,15 +121,19 @@ $currentcat = get_category( get_query_var( 'cat' ) );
 							<div class="the_post">
 
 								<div class="uk-card uk-card-default uk-card-small uk-card-article">
-									<div class="uk-card-media-top">
-										<?=  get_the_post_thumbnail( $post->ID, 'full');?>
-									</div>
-									<div class="uk-card-body">
-										<div class="uk-article-meta uk-categorie"><a href="<?= get_category_link(get_the_category($post->ID)[0]->term_id);?>" class="uk-text-uppercase uk-text-bold uk-animation-shake" style="color: <?=  tr_taxonomies_field('couleur_cat', 'category', get_the_category($post->ID)[0]->term_id); ?>;"><?= get_the_category($post->ID)[0]->name; ?></a></div>
-										<h2 class="uk-article-titre uk-text-uppercase uk-h5 uk-text-truncate uk-margin-remove"><a href="<?php the_permalink($post->ID) ?>"><?php the_title() ?></a> </h2>
-										<div class="uk-article-meta uk-categorie"><?= get_the_date('d/m/Y', $post->ID) ?></div>
+                                    <div uk-grid class="uk-grid-collapse uk-child-width-1-1@m uk-child-width-1-2">
+                                        <div class="uk-card-media-top uk-cover-container">
+                                            <img src="<?= get_the_post_thumbnail_url($post->ID, 'full')?>" alt="" uk-cover>
+                                            <!--												--><?//=  get_the_post_thumbnail( $the_query->ID, 'full');?>
+                                            <canvas width="600" height="400"></canvas>
+                                        </div>
+                                        <div class="uk-card-body">
+                                            <div class="uk-article-meta uk-categorie"><a href="<?= get_category_link(get_the_category($post->ID)[0]->term_id);?>" class="uk-text-uppercase uk-text-bold uk-animation-shake" style="color: <?=  tr_taxonomies_field('couleur_cat', 'category', get_the_category($post->ID)[0]->term_id); ?>;"><?= get_the_category($post->ID)[0]->name; ?></a></div>
+                                            <h2 class="uk-article-titre uk-text-uppercase uk-h5 uk-text-truncate uk-margin-remove"><a href="<?php the_permalink($post->ID) ?>"><?php the_title() ?></a> </h2>
+                                            <div class="uk-article-meta uk-categorie"><?= get_the_date('d/m/Y', $post->ID) ?></div>
 
-									</div>
+                                        </div>
+                                    </div>
 								</div>
 							</div>
 							<?php if($count === 4): ?>
