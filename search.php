@@ -14,17 +14,17 @@ global $wp_query;
 <?php get_header(); ?>
 
     <div class="uk-background-default uk-padding-small">
-        <div class="uk-panel uk-padding uk-heading-categorie">
+        <div class="uk-panel uk-padding-small uk-heading-categorie">
             <div class="uk-grid-small" uk-grid>
-                <div class="uk-width-1-4" >
+                <div class="uk-width-1-4@m uk-width-1-1@s " >
                     <h2 class="uk-h4 uk-heading uk-text-uppercase" style="line-height: 80px; height: 80px">Recherche</h2>
                 </div>
-                <div class="uk-width-3-4">
+                <div class="uk-width-3-4@m uk-width-1-1@s">
                     <nav class="uk-navbar-container uk-background-default" uk-navbar>
                         <div class="uk-navbar-left">
 
                             <div class="uk-navbar-item">
-                                <form class="uk-search uk-search-navbar" action="<?php echo esc_url( home_url( '/' ) ); ?>" method="get">
+                                <form class="uk-search uk-search-navbar" action="<?php echo esc_url( home_url( '/' ) ); ?>" method="get" style="width: 100% !important;">
                                     <span uk-search-icon></span>
                                     <input class="uk-search-input" type="search" name="s" value="<?php the_search_query(); ?>" placeholder="Recherche sur le site .....">
                                 </form>
@@ -38,7 +38,7 @@ global $wp_query;
 
         </div>
         <div class="uk-grid-small" uk-grid>
-            <div class="uk-width-2-3">
+            <div class="uk-width-2-3@m uk-width-1-1@s">
                 <div><small><?php echo $wp_query->found_posts; ?> résultat(s) trouvé(s)</small></div>
                 <div class="uk-margin">
     <?php if ( have_posts() ) { ?>
@@ -118,7 +118,7 @@ global $wp_query;
 
                 </div>
             </div>
-            <div class="uk-width-1-3">
+            <div class="uk-width-1-3@m uk-width-1-1@s">
 	            <?php get_template_part( 'populaireWidget' ); ?>
                 <hr>
 			    <?php get_template_part( 'pubAndSocial' ); ?>

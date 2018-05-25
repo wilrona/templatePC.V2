@@ -4,10 +4,10 @@
     <div class="uk-background-default uk-padding-small">
         <div class="uk-panel uk-padding uk-heading-categorie">
             <div class="uk-grid-small" uk-grid>
-                <div class="uk-width-1-4">
+                <div class="uk-width-1-4@m uk-width-1-3">
                     <a href="<?= get_category_link(get_the_category(get_the_ID())[0]->parent);?>" class="uk-link-reset uk-heading"><h2 class="uk-h4 uk-heading"><?= get_cat_name( get_the_category(get_the_ID())[0]->parent ) ?></h2></a>
                 </div>
-                <div class="uk-width-3-4">
+                <div class="uk-width-3-4@m uk-width-2-3 uk-flex uk-flex-middle">
                     <div class="uk-child-width-auto uk-grid-small" uk-grid>
                         <?php
                         $catlist_exclus = get_categories(
@@ -38,9 +38,9 @@
 
         </div>
 
-        <div class="uk-card uk-card-default uk-grid-collapse uk-margin uk-card-small" uk-grid>
+        <div class="uk-card uk-card-default uk-grid-collapse uk-margin uk-card-small uk-flex" uk-grid>
 
-            <div class="uk-width-3-5">
+            <div class="uk-width-3-5@m uk-width-1-1@s">
                 <div class="uk-card-body uk-border-top">
                     <h1 class="uk-h2 uk-text-uppercase uk-article-titre uk-text-break"><a href="<?php the_permalink() ?>"><?php the_title() ?></a></h1>
                     <div class="uk-article-description uk-article-description-italic">
@@ -73,11 +73,11 @@
                     </div>
                 </div>
             </div>
-            <div class="uk-card-media-right uk-cover-container uk-width-2-5">
+            <div class="uk-card-media-right uk-cover-container uk-width-2-5@m uk-width-1-1@s uk-flex-first@s">
 	            <?=  get_the_post_thumbnail(get_the_ID(), 'full', array('uk-cover'=> ''));?>
                 <canvas width="600" height="400"></canvas>
             </div>
-            <div class="uk-width-3-5 uk-margin">
+            <div class="uk-width-3-5@m uk-width-1-1@s uk-margin">
                 <div class="uk-card-body uk-card-content">
 	                <?php the_content() ?>
                     <div class="uk-margin-large uk-child-width-expand uk-grid-collapse uk-button-shared" uk-grid>
@@ -96,7 +96,7 @@
                     </div>
                 </div>
             </div>
-            <div class="uk-card-media-right uk-width-2-5 uk-margin">
+            <div class="uk-card-media-right uk-width-2-5@m uk-width-1-1@s uk-margin">
                 <?php
                     $galleries = tr_posts_field('image_de_la_gallerie');
                     if($galleries):
@@ -145,7 +145,7 @@
         </div>
 
         <div class="uk-grid-small" uk-grid>
-            <div class="uk-width-2-3">
+            <div class="uk-width-2-3@m uk-width-1-1@s">
 	            <?php
 	            $args = array(
 
@@ -169,7 +169,7 @@
                         <h3 class="uk-card-title">Sur le même sujet</h3>
                     </div>
                     <div class="uk-card-body">
-                        <div class="uk-grid-small uk-child-width-1-2 uk-margin" uk-grid>
+                        <div class="uk-grid-small uk-child-width-1-2@m uk-child-width-1-1@s uk-margin" uk-grid>
 	                        <?php while ( $similraire->have_posts() ) : $similraire->the_post(); ?>
                             <div class="the_post">
 
@@ -206,7 +206,9 @@
                         <div class="uk-card-header uk-position-relative">
                             <h3 class="uk-card-title uk-heading-divider">Commentaires
 
-                            <button uk-toggle="target: #formulaire; animation: uk-animation-fade" type="button" class="uk-button uk-button-default uk-button-menu uk-float-right">Reagir</button>
+                            <button uk-toggle="target: #formulaire; animation: uk-animation-fade" type="button" class="uk-button uk-button-default uk-button-menu uk-float-right uk-visible@m">Reagir</button>
+                            </h3>
+                            <button uk-toggle="target: #formulaire; animation: uk-animation-fade" type="button" class="uk-button uk-button-default uk-button-menu uk-hidden@m uk-width-1-1@s">Reagir</button>
 
                         </div>
                         <div id="formulaire" hidden class="uk-padding-small">
@@ -315,7 +317,7 @@
 
 
             </div>
-            <div class="uk-width-1-3">
+            <div class="uk-width-1-3@m uk-width-1-1@s">
 	            <?php get_template_part( 'pubAndSocial' ); ?>
 	            <?php get_template_part( 'populaireWidget' ); ?>
             </div>
